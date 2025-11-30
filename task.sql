@@ -15,7 +15,7 @@ CREATE TABLE Drug (
     
     FOREIGN KEY (Company_ID) 
         REFERENCES Pharmaceutical_Company(Company_ID)
-        ON DELETE CASCADE   -- If company removed ? all drugs removed
+        ON DELETE CASCADE   
 );
 
 CREATE TABLE Doctor (
@@ -40,7 +40,7 @@ CREATE TABLE Patient (
     
     FOREIGN KEY (Primary_Doctor_ID)
         REFERENCES Doctor(Doctor_ID)
-        ON DELETE NO ACTION -- doctor cannot be deleted if assigned to patient
+        ON DELETE NO ACTION 
 );
 
 
@@ -74,3 +74,4 @@ CREATE TABLE Prescription_Drug (
         REFERENCES Drug(Drug_ID)
         ON DELETE CASCADE
 );
+
