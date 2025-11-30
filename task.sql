@@ -29,7 +29,7 @@ CREATE TABLE Doctor (
 
 
 CREATE TABLE Patient (
-    UR_Number INT PRIMARY KEY,  -- Unique patient identifier
+    UR_Number INT PRIMARY KEY,  
     Name VARCHAR(100) NOT NULL,
     Address VARCHAR(255),
     Age INT CHECK (Age >= 0),
@@ -74,4 +74,5 @@ CREATE TABLE Prescription_Drug (
         REFERENCES Drug(Drug_ID)
         ON DELETE CASCADE
 );
+
 
